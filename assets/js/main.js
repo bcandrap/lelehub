@@ -91,7 +91,7 @@
   const partnerForm = document.getElementById('partnerForm');
   const partnerEmailLink = document.getElementById('partnerEmailLink');
   const formStatus = document.getElementById('formStatus');
-  const officialWa = '6281234567890';
+  const officialWa = '628133148128';
   const officialEmail = 'admin@iwakgroup.com';
 
   function readPartnerForm(){
