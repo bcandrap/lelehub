@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="78" viewBox="0 0 260 78" role="img" aria-label="LeleHub Farm">
+  <defs>
+    <linearGradient id="ring" x1="6" y1="5" x2="74" y2="74" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#23e3df"/>
+      <stop offset="0.55" stop-color="#0aa1ff"/>
+      <stop offset="1" stop-color="#17d6a6"/>
+    </linearGradient>
+    <linearGradient id="hub" x1="98" y1="18" x2="204" y2="18" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22d9f6"/>
+      <stop offset="1" stop-color="#12d1a3"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(3 4)">
+    <circle cx="35" cy="35" r="31" fill="none" stroke="url(#ring)" stroke-width="6"/>
+    <path d="M11 38c6-13 20-21 35-18 8 2 14 7 18 13-7 9-19 15-33 13-8-1-15-4-20-8Z" fill="#f8feff"/>
+    <path d="M17 38c12 1 21-3 28-13 3 8 1 15-5 21-9 2-17 0-23-8Z" fill="#0b2c51" opacity=".98"/>
+    <path d="M44 24c-10 3-17 9-22 18" fill="none" stroke="#f8feff" stroke-width="4.2" stroke-linecap="round"/>
+    <path d="M13 37 3 30M13 40 2 44M56 32c8-3 13-2 17 0M56 37c9 1 13 5 16 9" fill="none" stroke="#f8feff" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M24 45 9 57c9-1 17-4 23-10" fill="#f8feff"/>
+    <path d="M29 21 12 13c2 9 7 16 15 21" fill="#f8feff"/>
+    <circle cx="49" cy="29" r="2.4" fill="#0b2c51"/>
+    <path d="M55 16h16v4H55zm5-7h11v4H60z" fill="#23e3df" opacity=".95"/>
+  </g>
+  <g transform="translate(83 12)">
+    <text x="0" y="31" font-family="Inter, Arial, sans-serif" font-weight="900" font-size="32" letter-spacing="-1.2" fill="#ffffff">Lele</text>
+    <text x="67" y="31" font-family="Inter, Arial, sans-serif" font-weight="900" font-size="32" letter-spacing="-1.2" fill="url(#hub)">Hub</text>
+    <text x="3" y="58" font-family="Inter, Arial, sans-serif" font-weight="900" font-size="13" letter-spacing="8" fill="#27e3c5">FARM</text>
+  </g>
+</svg>
