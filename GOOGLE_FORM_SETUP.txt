@@ -1,0 +1,98 @@
+LELEHUB FARM - SETUP GOOGLE FORM BACKEND
+========================================
+
+TUJUAN
+------
+Customer mengisi survey langsung dari halaman LeleHUB.
+Google Form hanya menjadi backend penyimpanan dan tidak perlu dibuka oleh customer.
+Google Form kemudian menaruh respons otomatis ke Google Spreadsheet.
+
+SPREADSHEET TUJUAN ANDA
+-----------------------
+https://docs.google.com/spreadsheets/d/13RZaPQyD3boLEXutJbzzZ7JV0WWVm_azDeYaLwmBSfA/edit?usp=sharing
+
+1. BUAT GOOGLE FORM
+-------------------
+Buat Blank Form dan gunakan pertanyaan PERSIS seperti ini:
+
+1) Email
+   Type: Short answer
+   Required: ON
+
+2) Phone
+   Type: Short answer
+   Required: ON
+
+3) Rating
+   Type: Multiple choice
+   Pilihan: 1, 2, 3, 4, 5
+   Required: ON
+
+4) Comment
+   Type: Paragraph
+   Required: ON
+
+5) Wish
+   Type: Paragraph
+   Required: ON
+
+PENTING:
+- Jangan aktifkan "Limit to 1 response".
+- Jangan mewajibkan sign-in Google.
+- Form harus dapat diisi oleh siapa pun yang membuka link jika customer umum akan mengisi survey.
+
+2. HUBUNGKAN KE SPREADSHEET
+---------------------------
+Pada Google Form:
+Responses > Link to Sheets > Select existing spreadsheet
+lalu pilih spreadsheet LeleHUB Anda.
+
+Google akan membuat tab response di spreadsheet tersebut secara otomatis.
+
+3. KIRIM LINK GOOGLE FORM KE CHATGPT
+------------------------------------
+Contoh:
+https://docs.google.com/forms/d/e/1FAIpQLSxxxxxxxxxxxxxxxx/viewform
+
+Setelah Anda mengirim link Google Form, saya dapat membantu memasukkan:
+- FORM_ID
+- entry ID Email
+- entry ID Phone
+- entry ID Rating
+- entry ID Comment
+- entry ID Wish
+
+ke file:
+assets/js/resep-lele-fillet.js
+
+4. STRUKTUR KONFIGURASI DI JS
+-----------------------------
+const GOOGLE_FORM = {
+  formId: 'FORM_ID',
+  fields: {
+    email:   'entry.xxxxx',
+    phone:   'entry.xxxxx',
+    rating:  'entry.xxxxx',
+    comment: 'entry.xxxxx',
+    wish:    'entry.xxxxx'
+  }
+};
+
+5. ALUR FINAL
+-------------
+Customer
+  -> Survey LeleHUB
+  -> JavaScript POST diam-diam
+  -> Google Form
+  -> Google Spreadsheet LeleHUB
+
+Tidak membutuhkan:
+- Apps Script
+- server PHP
+- database berbayar
+- OAuth Google
+
+
+
+Google Form sudah dipasangkan ke:
+https://docs.google.com/forms/d/e/1FAIpQLSdzVs52Ge2peu64C2nOZEB1_h7XMYl77seB5y0Fk45Xm-Lv-A/viewform
